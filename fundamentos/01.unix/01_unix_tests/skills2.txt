@@ -1,0 +1,12 @@
+Internet
+Unix
+Bash
+Python
+Algoritmo
+Backend
+Comunicação
+Unix
+Bash
+Git
+HTML
+CSS

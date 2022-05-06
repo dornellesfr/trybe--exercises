@@ -1,0 +1,39 @@
+#h1 {
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif;
+    font-style: oblique;
+}
+
+
+#list-colors {
+    background-color: black;
+    line-height: 55px;
+    font-family: monospace;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+
+#paragraf {
+    font-weight: 600;
+    font-size: 3em;
+    background-color: cyan;
+}
+
+
+.color-style {
+    text-align: center;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#red {
+    background-color: red ;
+}
+
+#brown {
+    background-color: brown;
+}

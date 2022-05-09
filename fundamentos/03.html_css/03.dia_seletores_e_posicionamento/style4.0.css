@@ -1,3 +1,35 @@
 div:hover {
-    border-color: blueviolet;
+    border: solid green 3px;
+}
+
+#primary-color {
+    background-color: rgb(238, 224, 28);
+}
+
+#secundary-color {
+    background-color: rgb(162, 15, 207);
+}
+
+#complementar-color {
+    background-color: blue;
+    padding: 6px;
+}
+
+#dark-color {
+    background-color: black;
+    color: white;
+}
+
+#light-color {
+    background-color: bisque;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.odd {
+    font-style: italic
 }

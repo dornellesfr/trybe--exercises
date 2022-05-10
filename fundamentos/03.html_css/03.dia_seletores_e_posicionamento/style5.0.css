@@ -1,0 +1,60 @@
+ol li {
+    background-color: yellow;
+}
+
+.odd {
+    text-transform: uppercase;
+}
+
+.even {
+    color: green;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+h1 em {
+    font-size: 40px;
+    border: solid black 1px;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: 900;
+}
+
+.top-linguages {
+    color: rgb(53, 53, 250);
+}
+
+.java-name {
+    background-color: pink;
+}
+
+.links:hover {
+    font-weight: 900;
+}
+
+.stackoverflow:hover {
+    color: orange
+}
+
+.W3S:hover {
+    color: green;
+}
+
+.MDN:hover {
+    color: black;
+}
+
+.devdocs:hover {
+    color: rgb(170, 170, 3);
+}
+
+.trybe:hover {
+    color: green;
+}

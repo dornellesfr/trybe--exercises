@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title" class="most-important">Título</h2>
+      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle" >Subtítulo</h4>
+      <p id="second-paragraph" class="most-important">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.querySelector('#page-title').innerText = 'SpiderMan: No way home';
+      document.querySelector('#second-paragraph').innerText = 'An movie that change the worlds';
+      document.querySelector('#subtitle').innerText = 'Best movie 2021';
+      document.querySelector('.most-important').style.color = 'darkblue';
+      document.querySelector('h4').style.color = 'yellow';
+    </script>
+  </body>
+</html>

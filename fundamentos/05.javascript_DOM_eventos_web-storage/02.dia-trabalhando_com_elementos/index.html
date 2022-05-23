@@ -87,11 +87,11 @@
       sectionWithPSon.appendChild(newP);
       
       // 5
-      let sectionLeftContent = creatAElement('section', 'leftContent', '');
+      let sectionLeftContent = creatAElement('section', 'leftC-content', '');
       main.appendChild(sectionLeftContent);
 
       // 6
-      let sectionRightContent = creatAElement('section', 'rightContent', '');
+      let sectionRightContent = creatAElement('section', 'right-content', '');
       main.appendChild(sectionRightContent);
       
       // 7
@@ -122,8 +122,41 @@
       sectionRightContent.appendChild(listU);
 
       //9
-      
+      let firstH3 = creatAElement('h3', '', '');
+      let secondH3 = creatAElement('h3', '', '');
+      let thirdH3 = creatAElement('h3', '', '');
 
+      main.appendChild(firstH3);
+      main.appendChild(secondH3);
+      main.appendChild(thirdH3);
+
+      // // otherThingToDo
+
+      // 1
+      h1Title.className = 'title';
+      
+      // 2
+      firstH3.className = 'description'; secondH3.className = 'description'; thirdH3.className = 'description';
+
+      // 3
+      main.removeChild(sectionLeftContent);
+
+      //4
+      document.getElementsByClassName("right-content")[0].style.marginRight = 'auto';
+
+      //5
+      document.getElementsByClassName('center-content')[0].style.backgroundColor = 'green';
+
+      //6
+      let li = document.getElementsByTagName('li');
+      let li1 = document.getElementsByTagName('li');
+      let dad = document.getElementsByTagName('ul');
+      for (c = 8; c < li1.length;) {
+        if (c == 8) {
+          li[c].remove();
+        }
+      }
+      
 
     </script>
   </body>

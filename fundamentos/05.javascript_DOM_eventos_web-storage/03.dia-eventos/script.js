@@ -35,3 +35,42 @@ function cElementLi() {
 }
 
 cElementLi();
+
+// ===========================================================================
+
+
+function buttonHoliday(string) {
+  let button = document.createElement('button');
+  button.innerText = string;
+  button.setAttribute('id', 'btn-holiday');
+  let dad = document.querySelector('.buttons-container');
+  dad.appendChild(button);
+}
+
+buttonHoliday('Feriados');
+
+// ===========================================================================
+
+let button = document.querySelector('#btn-holiday');
+
+function changeBackgroundHoliday(){
+  let holidays = document.querySelectorAll('.holiday');
+  for (c = 0; c < holidays.length; c += 1) {
+    if (holidays[c].style.backgroundColor == '') {
+      holidays[c].style.backgroundColor = 'green';
+      holidays[c].style.color = 'white';
+    }
+    else {
+      holidays[c].style.backgroundColor = '';
+      holidays[c].style.color = '';
+    }
+  }
+}
+
+button.addEventListener('click', changeBackgroundHoliday);
+
+// ===========================================================================
+
+
+
+

@@ -71,6 +71,33 @@ button.addEventListener('click', changeBackgroundHoliday);
 
 // ===========================================================================
 
+function buttonFriday(str) {
+  let button = document.createElement('button');
+  button.innerText = str;
+  button.setAttribute('id', 'btn-friday')
+  dad = document.querySelector('.buttons-container');
+  dad.appendChild(button);
 
+}
+buttonFriday('Sexta-feira');
 
+// ===========================================================================
 
+let button1 = document.querySelector('#btn-friday');
+
+function changeBackgroundFriday(){
+  let fridays = document.querySelectorAll('.friday');
+  for (c = 0; c < fridays.length; c += 1) {
+    let compare = fridays[c];
+    if (fridays[c].style.innerText == compare) {
+      fridays[c].style.innerText = 'sextouu';
+      fridays[c].style.color = 'salmon'
+    }
+    else {
+      fridays[c].style.innerText = '';
+      fridays[c].style.color = 'salmon'
+    }
+  }
+}
+
+button1.addEventListener('click', changeBackgroundFriday);

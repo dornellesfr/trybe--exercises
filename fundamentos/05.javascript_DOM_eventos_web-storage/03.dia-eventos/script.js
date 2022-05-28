@@ -71,7 +71,7 @@ button.addEventListener('click', changeBackgroundHoliday);
 
 // ===========================================================================
 
-function buttonFriday(str) {
+function makeButtonFriday(str) {
   let button = document.createElement('button');
   button.innerText = str;
   button.setAttribute('id', 'btn-friday')
@@ -79,25 +79,48 @@ function buttonFriday(str) {
   dad.appendChild(button);
 
 }
-buttonFriday('Sexta-feira');
+makeButtonFriday('Sexta-feira');
 
 // ===========================================================================
 
-let button1 = document.querySelector('#btn-friday');
+
+let buttonFriday = document.getElementById('btn-friday');
 
 function changeBackgroundFriday(){
-  let fridays = document.querySelectorAll('.friday');
+  let fridays = document.getElementsByClassName('friday');
+  const list = [4, 11, 18, 25];
   for (c = 0; c < fridays.length; c += 1) {
-    let compare = fridays[c];
-    if (fridays[c].style.innerText == compare) {
-      fridays[c].style.innerText = 'sextouu';
-      fridays[c].style.color = 'salmon'
+    if (fridays[c].innerText == list[c]) {
+      fridays[c].innerText = 'sextouu';
+      fridays[c].style.color = 'salmon';
     }
     else {
-      fridays[c].style.innerText = '';
-      fridays[c].style.color = 'salmon'
+      fridays[c].innerText = list[c];
+      fridays[c].style.color = ''
     }
   }
 }
+buttonFriday.addEventListener('click', changeBackgroundFriday);
 
-button1.addEventListener('click', changeBackgroundFriday);
+// ===========================================================================
+
+
+const days = document.getElementsByClassName('day');
+for (let index = 0; index < days.length; index += 1) {
+  days[index].addEventListener('mouseover', function (event) {
+    event.target.style.fontSize = '40px';
+  });
+  days[index].addEventListener('mouseleave', function (event){
+    event.target.style.fontSize = '';
+  });
+}
+
+// ===========================================================================
+
+function newTask(str){
+  let dad = document.getElementsByClassName('my-tasks')[0];
+  let task = document.createElement('span');
+  task.innerText = str;
+  dad.appendChild(task);
+}
+newTask('cozinhar');

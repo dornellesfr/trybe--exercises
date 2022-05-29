@@ -117,10 +117,62 @@ for (let index = 0; index < days.length; index += 1) {
 
 // ===========================================================================
 
-function newTask(str){
+function newTask(str) {
+  str = document.getElementById('task-input');
   let dad = document.getElementsByClassName('my-tasks')[0];
   let task = document.createElement('span');
-  task.innerText = str;
+
+  task.innerText = ` ${str.value} \n`;
   dad.appendChild(task);
+  }
+let buttonAdd = document.getElementById('btn-add');
+buttonAdd.addEventListener('click', newTask);
+
+// ===========================================================================
+
+function changeColor(color) {
+  var newDiv = document.createElement('div');
+  newDiv.className = 'task';
+  newDiv.style.backgroundColor = color;
+  var dad = document.getElementsByClassName('my-tasks')[0];
+  dad.appendChild(newDiv);
+
+
 }
-newTask('cozinhar');
+changeColor('red');
+
+// ===========================================================================
+
+let legendTask = document.getElementsByClassName('task');
+for (let c = 0; c < legendTask.length; c += 1) {
+  legendTask[c].addEventListener('click', function(event) {
+    for (let i in legendTask) {
+      legendTask[i].className = 'task';
+    }
+    var alvo = event.target;
+    alvo.classList.add('selected');
+  });
+}
+
+// ===========================================================================
+
+let buttonDay = document.getElementsByClassName('day');
+
+function addBackground(event) {
+  let alvo = event.target;
+  if (alvo.style.color == '') {
+    var element = document.getElementsByClassName('selected')[0];
+    var cssObj = window.getComputedStyle(element, null);
+    var bgColor = cssObj.getPropertyValue("background-color");
+    alvo.style.color = bgColor;
+  } 
+  else {
+    alvo.style.color = '';
+  }
+}
+
+for (let i in buttonDay) {
+  buttonDay[i].addEventListener('click', addBackground);
+}
+
+// ===========================================================================

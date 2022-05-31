@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.green {
+  background-color: darkgreen;
+}
+
+.black {
+  background-color: black;
+}
+
+.salmon {
+  background-color: salmon;
+}
+
+.white {
+  background-color: whitesmoke;
+}
+

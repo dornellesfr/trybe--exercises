@@ -20,3 +20,22 @@ body{
 h1 {
   text-align: center;
 }
+
+#input-name, #input-email{
+  margin: 2% 10%;
+}
+
+#input-name input, #input-email input {
+  width: 100%;
+}
+
+.local {
+  width: 100%;
+  margin: 2% 10%;
+}
+
+.to-answer {
+  width: 100%;
+  margin: 2% 5%;
+}
+

@@ -11,8 +11,36 @@
     <header><h1>Form to travel</h1></header>
 
     <main>
-      <label for="input-name">Nome: </label>
-      <input type="text" name="input-name" autofocus id="">
+      <div id="input-name">
+        <label for="input-name">Nome completo: </label>
+        <input type="text" name="input-name" autofocus>
+      </div>
+      
+      <div id="input-email">
+        <label for="input-email">E-mail: 
+        </label>
+        <input type="email" name="input-email">
+      </div>
+      
+      <div class="local">
+        <label    for="favorite-place"></label>Destino favorito: </label>
+        <div>
+        <label 
+        for="place-city"><input type="radio" name="favorite-place" id="place-city" value="city">Cidade</label>
+
+        <label for="place-field"><input type="radio" name="favorite-place" id="place-field">Campo</label>
+
+        <label for="place-beach"><input type="radio" name="favorite-place" id="place-beach">Praia</label>
+
+        <label for="place-mountain"><input type="radio" name="favorite-place" id="place-mountain">Montanha</label>
+      </div>
+        <div class="to-answer">
+          <label for="answer-text">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+
+          <textarea name="answer-text" id="answer-text" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      
     </main>
   </div>
 </body>

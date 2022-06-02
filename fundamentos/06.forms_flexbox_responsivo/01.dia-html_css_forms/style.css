@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: rgb(187, 187, 187);
+  background-color: rgb(161, 151, 206);
 }
 
 #background-content {
@@ -35,7 +35,29 @@ h1 {
 }
 
 .to-answer {
-  width: 100%;
-  margin: 2% 5%;
+  margin-top: 10px;
 }
 
+.to-answer textarea {
+  resize: none;
+}
+
+#date-travel {
+  margin-top: 10px;
+}
+
+#news-trybe {
+  margin-top: 10px;
+}
+
+.button-send {
+  margin-top: 10px;
+  padding: 3px;
+  background-color: rgb(206, 206, 206);
+  border-radius: 5px;
+  border: solid rgb(148, 148, 148) 1px;
+}
+
+.button-send:hover {
+  background-color: beige;
+}

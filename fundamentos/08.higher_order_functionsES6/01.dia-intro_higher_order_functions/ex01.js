@@ -1,5 +1,9 @@
+const retEmail = (nome) => {
+  return nome.toLowerCase().replace(' ', '_');
+};
+
 const retObj = (nome) => {
-  let email = nome;
+  let email = retEmail(nome)
   email = `${email}@trybe.com`;
   return {
     nomeCompleto: nome,
@@ -15,3 +19,5 @@ const newEmployees = () => {
   }
   return employees;
 };
+
+console.log(newEmployees());

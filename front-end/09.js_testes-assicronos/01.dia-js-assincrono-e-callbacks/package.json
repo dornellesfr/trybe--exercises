@@ -1,0 +1,15 @@
+{
+  "name": "01.dia-js-assincrono-e-callbacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "traine.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.2"
+  }
+}

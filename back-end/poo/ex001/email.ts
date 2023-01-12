@@ -1,23 +1,43 @@
 type selectFilter = 'recipient' | 'subject' | 'sender';
 
 class Email {
-  sendAddres: string;
-  receivedAddress: string;
-  subjectMessage: string;
-  contentMessage: string;
+  private _from: string;
+  private _to: string;
+  private _subjectMessage: string;
+  private _contentMessage: string;
 
-  constructor(sendAddres: string, receivedAddress: string, contentMessage: string, subjectMessage: string) {
-    this.sendAddres = sendAddres;
-    this.receivedAddress = receivedAddress;
-    this.subjectMessage = subjectMessage;
-    this.contentMessage = contentMessage;
+  constructor(from: string, to: string, subjectMessage: string, contentMessage: string) {
+    this._from = from;
+    this._to = to;
+    this._subjectMessage = subjectMessage;
+    this._contentMessage = contentMessage;
   }
 
-  visualRepresent(): string {
-    return this.sendAddres + this.receivedAddress + this.subjectMessage + this.contentMessage;
+  set subjectMessage(newSubject: string) {
+    if(newSubject.length < 40) this._subjectMessage = newSubject;
   }
 
-  // filteringFor(typeFilter: selectFilter, by: string): string {
-    
-  // }
+  get subjectMessage() {
+    return this._subjectMessage;
+  }
+
+  get from() {
+    return this._from;
+  }
+
+  get to() {
+    return this._to;
+  }
+
+  get content() {
+    return `
+    ${this._from} to ${this._to}
+    ${this._subjectMessage}
+
+    ${this._contentMessage}
+    `;
+  }
 }
+
+const email1 = new Email('fe@test', 'test@test', 'Stuffs to do', 'Hi, dare Ava, how is it going? I would like to know if you have some time free to help me with stuffs to do in my garden?');
+console.log(email1.content);
